@@ -1,0 +1,109 @@
+WindowManager:
+    MainWindow:
+    TrainingWindow:
+    PlanEditorWindow:
+    StopperWindow:
+    TimerWindow:
+
+<MainWindow>:
+    name: "main"
+    GridLayout:
+        cols: 1
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: "GymApp"
+            font_size: 50
+
+        Button:
+            text: "Rozpocznij trening"
+            on_release:
+                app.root.current = "trainingwindow"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "Stwórz plan"
+            on_release:
+                app.root.current = "editorwindow"
+                root.manager.transition.direction = "left"
+
+        Button:
+            text: "Stoper"
+            on_release:
+                app.root.current = "stopperwindow"
+                root.manager.transition.direction = "left"
+        
+        Button:
+            text: "Timer"
+            on_release:
+                app.root.current = "timerwindow"
+                root.manager.transition.direction = "left"
+
+<TrainingWindow>:
+    name: "trainingwindow"
+
+    GridLayout:
+        cols: 1
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: "Training window"
+            font_size: 50
+        Button:
+            text: "Go back"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+<PlanEditorWindow>:
+    name: "editorwindow"
+
+    GridLayout:
+        cols: 1
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: "Editor window"
+            font_size: 50
+        Button:
+            text: "Go back"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+<StopperWindow>:
+    name: "stopperwindow"
+
+    GridLayout:
+        cols: 1
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: "Stoper window"
+            font_size: 50
+        Button:
+            text: "Go back"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+<TimerWindow>:
+    name: "timerwindow"
+
+    GridLayout:
+        cols: 1
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: "Timer window"
+            font_size: 50
+        Button:
+            text: "Go back"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
